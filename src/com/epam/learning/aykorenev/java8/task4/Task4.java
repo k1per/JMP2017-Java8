@@ -24,10 +24,11 @@ public class Task4 {
         Arrays.stream(authors).forEach(author -> author.setBookList(asList(Arrays.copyOfRange(books, 0, ThreadLocalRandom.current().nextInt(1, 3)))));
         Arrays.stream(books).forEach(book -> book.setAuthorList(asList(Arrays.copyOfRange(authors, 0, ThreadLocalRandom.current().nextInt(1, 3)))));
 
-        Map<Integer, Set<Book>> multimap = Arrays.stream(books).collect(Collectors.groupingBy(Book::getNumberOfPages, Collectors.toSet()));
-        multimap.forEach((integer, books1) -> {
-            System.out.println("Books with number of pages " + integer);
-            books1.forEach(book -> System.out.println(book.getTitle()));
+        Map<Integer, Set<Author>> multimap = Arrays.stream(authors).collect(Collectors.groupingBy(o -> o.getBookList().size(), Collectors.toSet()));
+
+        multimap.forEach((integer, authorSet) -> {
+            System.out.println("Authors with number of books " + integer);
+            authorSet.forEach(author -> System.out.println("Name " + author.getName() + ", age " + author.getAge()));
         });
     }
 }
