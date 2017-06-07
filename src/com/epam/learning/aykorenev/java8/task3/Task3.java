@@ -1,4 +1,4 @@
-package epam.learning.aykorenev.java8.task3;
+package com.epam.learning.aykorenev.java8.task3;
 
 /**
  * Created by k1per on 07.06.17.

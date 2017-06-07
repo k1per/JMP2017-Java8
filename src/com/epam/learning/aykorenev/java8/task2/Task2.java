@@ -1,10 +1,7 @@
 package com.epam.learning.aykorenev.java8.task2;
 
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static java.util.Comparator.comparing;
