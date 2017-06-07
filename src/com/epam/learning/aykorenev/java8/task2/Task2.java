@@ -58,7 +58,7 @@ public class Task2 {
         Arrays.stream(books).max(comparing(Book::getNumberOfPages)).ifPresent(book -> System.out.printf("Biggest book title is" + book.getTitle()));
     }
 
-    private static Book[] createBooks() {
+    public static Book[] createBooks() {
         return new Book[]{
                 new Book("Funny story of junior java developer", ThreadLocalRandom.current().nextInt(0, 1001)),
                 new Book("Mono2", ThreadLocalRandom.current().nextInt(0, 1001)),
@@ -85,7 +85,7 @@ public class Task2 {
         };
     }
 
-    private static Author[] createAuthors() {
+    public static Author[] createAuthors() {
         return new Author[]{
                 new Author("RedCrocodile", (short) ThreadLocalRandom.current().nextInt(0, 101)),
                 new Author("YellowCrocodile", (short) ThreadLocalRandom.current().nextInt(0, 101)),
